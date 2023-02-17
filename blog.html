@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- linking tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Blog</title>
+    <link rel="icon" href="images/geometry.png" />
+  </head>
+  <body>
+    <header>
+      <!-- this section contains the title and a button to main page -->
+      <section class="pt-10">
+        <div
+          class="block lg:flex w-3/4 mx-auto bg-sky-100 justify-between px-8 py-5"
+        >
+          <div>
+            <h1 class="text-3xl font-bold">Interactive</h1>
+            <h4 class="text-xl text-neutral-500">Geometry Genius</h4>
+          </div>
+          <div class="my-auto">
+            <button
+              id="website-btn"
+              class="py-2 px-10 bg-blue-400 text-white text-center rounded-lg my-2 lg:my-0"
+            >
+              Website
+            </button>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- this section contains the blog -->
+      <section>
+        <div class="w-3/4 h-min mx-auto bg-sky-200 px-14 rounded-lg">
+          <h1 class="text-3xl text-center font-bold my-5">
+            Questions and Answers
+          </h1>
+
+          <h2 class="text-2xl font-medium text-center pb-2">What is DOM?</h2>
+          <p class="pb-2">
+            DOM stand for Document Object Model. It is used for dynamically
+            accessing, updating, adding and deleting the contents, styles and so
+            on of scripts and programs so that it can meet the requirement of
+            the application or website.
+          </p>
+
+          <h2 class="text-2xl font-medium text-center pb-2">
+            How to select elements from DOM?
+          </h2>
+          <p class="pb-2">
+            Elements from DOM can be selected using 5 different selectors.
+            <br />
+            The selectors are as follows: <br />
+            1- getElementsByTagName() which uses tag name to access the element.
+            <br />
+            2- getElementsByClassName() which uses class name to access the
+            element. <br />
+            3- getElementById() which uses id name to access the element. <br />
+            4- querySelector() which selects the first element of the specified
+            CSS selector. <br />
+            5- querySelectorAll() which selects all the elements of the
+            specified CSS selector.
+          </p>
+
+          <h2 class="text-2xl font-medium text-center pb-2">
+            What is Event Bubble?
+          </h2>
+          <p class="pb-2">
+            Event Bubble is a concept in the DOM. It takes place when an element
+            receives the event parameter. This is when the DOM tree is
+            traversed. At first the whole tree is traversed until the target
+            node is found, then from the target node the event is bubbled to the
+            top of the tree until it reaches the first parent node.
+          </p>
+
+          <h2 class="text-2xl font-medium text-center pb-2">
+            What is callback function?
+          </h2>
+          <p class="pb-2">
+            The concept of callback function is such that, a function is passed
+            as a parameter of another function, so that it invokes the outer
+            most function to complete any action written on the function.
+          </p>
+        </div>
+      </section>
+    </main>
+    <!-- JS Script files added here -->
+    <!-- Do not write code below this line -->
+    <script src="JS/utility.js"></script>
+    <script src="JS/website.js"></script>
+  </body>
+</html>

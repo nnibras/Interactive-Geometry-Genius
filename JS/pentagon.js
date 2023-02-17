@@ -1,0 +1,35 @@
+document.getElementById("pentagon-btn").addEventListener("click", function () {
+  const p = getTextValue("pen-p");
+  const b = getTextValue("pen-b");
+
+  if (isNaN(p) || isNaN(b)) alert("Fields Cannot be Empty.");
+  else if (p <= 0 || b <= 0) alert("Dimensions Cannot be Negative or Zero.");
+  else if (typeof p != "number" || typeof b != "number")
+    alert("Please Enter Numbers Only.");
+  else {
+    const name = getTextInner("pen-name");
+
+    const area = (0.5 * p * b).toFixed(2);
+
+    const areaDiv = document.getElementById("area-div");
+
+    //   for dynamic updating of count
+    function updateCount() {
+      for (let i = 1; i < areaDiv.children.length; i++) {
+        const field = areaDiv.children[i];
+        const shapeLabel = field.querySelector("span");
+        if (shapeLabel) {
+          shapeLabel.textContent = ` ${i}.  `;
+        }
+      }
+      count--;
+    }
+    count++;
+    const field = create(count, name, area, updateCount);
+    areaDiv.appendChild(field);
+  }
+});
+
+document.getElementById("pen").addEventListener("mouseenter", function () {
+  colorChange("pen");
+});
